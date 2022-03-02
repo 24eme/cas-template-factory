@@ -34,7 +34,7 @@
 ## Build a cas war
 
     cd cas-overlay-template
-    ./gradelw clean build
+    ./gradlew clean build
 
 ## Put your war on tomcat and restart it
 
