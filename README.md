@@ -24,7 +24,7 @@
 
 ## Copy and adapt the configuration
 
-    cp config/cas.properties config.log4j.xml /etc/cas/config
+    cp config/cas.properties config/log4j.xml /etc/cas/config
 
 ## Link to the templates you want
 
