@@ -270,8 +270,8 @@ a {
   max-width: 460px;
 }
 #content .form-block h2 {
-  border-bottom: 1px solid #dcd9d3;
-  color: #1c2436;
+  border-bottom: 1px solid var(--cas-theme-primary, #dcd9d3);
+  color: var(--cas-theme-primary, #1c2436);
   font-size: 24px;
   margin-top: 0;
 }
@@ -302,13 +302,13 @@ a {
   overflow: hidden;
 }
 #content .form-block .form-signup .btn {
-  background: #c29140;
+  background: var(--cas-theme-primary, #c29140);
   color: #fff;
   float: right;
 }
 #content .form-block .form-bottom {
   background: #efeeec;
-  color: #1c2436;
+  color: var(--cas-theme-primary, #1c2436);
   font-family: "oswaldregular", Arial, sans-serif;
   font-size: 18px;
   position: relative;
@@ -344,10 +344,10 @@ a {
   vertical-align: middle;
 }
 #footer {
-  background: #1c2436;
-  color: #fff;
-  height: 145px;
-  line-height: 145px;
+  background: #fff;
+  color: #333;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
 }
 #footer a {
@@ -399,7 +399,7 @@ a {
 }
 
 :root {
-    --cas-theme-primary: #1c2436;
+    --cas-theme-primary: #c80064;
     --mdc-theme-primary: var(--cas-theme-primary, #1c2436);
 }
 
