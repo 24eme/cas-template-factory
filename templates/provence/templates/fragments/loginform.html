@@ -305,8 +305,6 @@
                 </span>
             </div>
 
-            <hr th:if="${loginFormViewable and loginFormEnabled}" class="my-4"/>
-
             <span id="webauthnLoginPanel" th:if="${webAuthnPrimaryAuthenticationEnabled}">
                 <script type="text/javascript">
                     $('#webauthnLoginPanel').show();
@@ -343,8 +341,6 @@
         <span th:if="${loginFormViewable and loginFormEnabled}">
             <div th:replace="fragments/logindeclarvins :: logindeclarvins"/>
         </span>
-
-        <hr th:if="${loginFormViewable and loginFormEnabled}" class="my-4"/>
 
         <span th:if="${loginFormViewable and loginFormEnabled}">
             <div th:replace="fragments/loginsidebar :: loginsidebar"/>
