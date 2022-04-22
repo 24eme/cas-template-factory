@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Login Declarvins Fragment</title>
+    <link href="../../static/css/cas.css" rel="stylesheet" th:remove="tag" />
+</head>
+
+<body>
+    <main role="main" class="container mt-3 mb-3">
+        <div th:fragment="logindeclarvins" id="declarvins">
+            <div class="form-signup">
+                <h3>Connexion avec DeclarVins :</h3>
+
+                <p>Si vous avez un compte déclarvins, vous pouvez l'utiliser pour avoir accès à la plateforme du syndicat.</p>
+
+                <a href="https://login.declarvins.net/cas/login/login?service=https://declaration.syndicat-cotesdeprovence.com/" class="mdc-button mdc-button--raised btn btn-primary btn-primary">Se connecter avec Declarvins</a>
+            </div>
+            <div id="cookiesDisabled" class="errors" style="display:none;background-color:red">
+                <h2>Cookies navigateur désactivés</h2>
+                <p>Votre navigateur ne supporte pas les cookies. L'authentification centralisée NE FONCTIONNERA PAS.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

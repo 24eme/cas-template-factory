@@ -247,6 +247,7 @@ a {
 }
 #page {
   min-height: 850px;
+  margin-bottom: 50px;
 }
 #header {
   color: #FFF;
@@ -384,13 +385,14 @@ a {
     padding: 0px;
 }
 
-.login-section form, .login-section #sidebar .form-signup {
+.login-section form, .login-section #sidebar .form-signup, .login-section #declarvins .form-signup {
     padding: 2rem 2.5rem;
 }
 
 .login-section form {
     padding-bottom: 0px;
 }
+.login-section #declarvins .form-signup,
 .login-section #sidebar .form-signup {
     padding-top: 0px;
 }
