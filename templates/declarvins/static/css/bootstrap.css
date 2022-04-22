@@ -271,7 +271,7 @@ a {
 }
 #content .form-block h2 {
   border-bottom: 1px solid #dcd9d3;
-  color: #1c2436;
+  color: #86005b;
   font-size: 24px;
   margin-top: 0;
 }
@@ -292,7 +292,7 @@ a {
   margin: 10px 0;
 }
 #content .form-block .form-signin .btn {
-  background: #1c2436;
+  background: #86005b;
   color: #fff;
   margin: 10px 0 0;
   display: block;
@@ -302,13 +302,13 @@ a {
   overflow: hidden;
 }
 #content .form-block .form-signup .btn {
-  background: #c29140;
+  background: #494949;
   color: #fff;
   float: right;
 }
 #content .form-block .form-bottom {
   background: #efeeec;
-  color: #1c2436;
+  color: #86005b;
   font-family: "oswaldregular", Arial, sans-serif;
   font-size: 18px;
   position: relative;
@@ -344,7 +344,7 @@ a {
   vertical-align: middle;
 }
 #footer {
-  background: #1c2436;
+  background: #86005b;
   color: #fff;
   height: 145px;
   line-height: 145px;
@@ -378,7 +378,7 @@ a {
 
 
 #sidebar .btn-primary {
-    background: #c29140;
+    background: #494949;
     color: #fff;
     float: right;
 }
@@ -399,8 +399,8 @@ a {
 }
 
 :root {
-    --cas-theme-primary: #1c2436;
-    --mdc-theme-primary: var(--cas-theme-primary, #1c2436);
+    --cas-theme-primary: #86005b;
+    --mdc-theme-primary: var(--cas-theme-primary, #86005b);
 }
 
 #divAuthenticationAttributes{
