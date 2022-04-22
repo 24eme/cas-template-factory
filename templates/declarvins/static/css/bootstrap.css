@@ -247,7 +247,7 @@ a {
 }
 #page {
   min-height: 850px;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 #header {
   color: #FFF;
@@ -262,7 +262,7 @@ a {
 }
 #header .logo-site img {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto;
 }
 #content .form-block {
   background: #fff;
@@ -270,7 +270,7 @@ a {
   max-width: 460px;
 }
 #content .form-block h2 {
-  border-bottom: 1px solid #dcd9d3;
+  border-bottom: 1px solid #989898;
   color: #86005b;
   font-size: 24px;
   margin-top: 0;
@@ -285,7 +285,7 @@ a {
   padding: 20px;
 }
 #content .form-block .form-signin {
-  border-bottom: 1px solid #dcd9d3;
+  border-bottom: 1px solid #989898;
   text-align: right;
 }
 #content .form-block .form-signin .form-row {
@@ -362,6 +362,14 @@ a {
 }
 #footer li + li {
   margin: 0 0 0 40px;
+}
+
+#footer li strong {
+    color: #989898;
+}
+
+hr {
+    color: #989898 !important;
 }
 
 .mdc-drawer-app-content {

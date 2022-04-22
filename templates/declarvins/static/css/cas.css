@@ -592,10 +592,6 @@ button.close {
     margin-right: auto;
 }
 
-#footer li strong {
-    color: #989898;
-}
-
 /* IE flex fix */
 
 #main-content {
