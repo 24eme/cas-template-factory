@@ -328,6 +328,14 @@ a {
   border-color: #fff transparent transparent;
   content: '';
   border-top-style: solid;
+  margin: 0 auto;
+  display: inline-block;
+  transform: rotate(360deg);
+  right: 0;
+  left: 0;
+  bottom: 100%;
+  width: 0;
+  height: 0;
 }
 #footer {
   background: #fff;
