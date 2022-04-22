@@ -247,6 +247,7 @@ a {
 }
 #page {
   min-height: 850px;
+  margin-bottom: 50px;
 }
 #header {
   color: #FFF;
