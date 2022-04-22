@@ -388,7 +388,7 @@ button.close {
 
 .mdc-button--raised:not(:disabled) {
     margin-right: 5px;
-    background-color: var(--mdc-theme-primary, #86005b);
+    background-color: var(--mdc-theme-primary, #494949);
 }
 
 .mdc-button--raised.mdc-button-twitter:not(:disabled) {
