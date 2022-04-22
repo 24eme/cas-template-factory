@@ -341,6 +341,12 @@
         </div>
 
         <span th:if="${loginFormViewable and loginFormEnabled}">
+            <div th:replace="fragments/logindeclarvins :: logindeclarvins"/>
+        </span>
+
+        <hr th:if="${loginFormViewable and loginFormEnabled}" class="my-4"/>
+
+        <span th:if="${loginFormViewable and loginFormEnabled}">
             <div th:replace="fragments/loginsidebar :: loginsidebar"/>
         </span>
 
