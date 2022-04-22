@@ -261,7 +261,7 @@ a {
 }
 #header .logo-site img {
   display: block;
-  margin: 0 auto 20px;
+  margin: 10px auto 20px;
 }
 #content .form-block {
   background: #fff;
@@ -307,6 +307,9 @@ a {
   color: #fff;
   float: right;
 }
+#forgotten {
+  text-align: left;
+}
 #content .form-block .form-bottom {
   background: var(--cas-theme-primary, #efeeec);
   color: #fff;
@@ -317,12 +320,24 @@ a {
   padding: 25px 65px;
   margin: 0;
 }
+#content .form-block .form-bottom::before {
+  position: absolute;
+  top: 0;
+  border-style: inset;
+  border-width: 17px 17px 0;
+  border-color: #fff transparent transparent;
+  content: '';
+  border-top-style: solid;
+}
 #footer {
   background: #fff;
   color: #333;
   height: 50px;
   line-height: 50px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 #footer a {
   text-decoration: none;
