@@ -48,4 +48,12 @@
 
 The cas is available on https://localhost:8443/ (accept the autosigned certificate)
 
+##Dockerization
 
+### Build image
+
+    sudo docker build . --build-arg cas_templatespath=templates/path --build-arg ldap_domain=example.org --build-arg ldap_passwd=adminpassword  --build-arg ldap_test_username=test
+
+### Run container
+
+    sudo docker run -it -p 8080:80 -p 389:389 <IMAGE_ID>
