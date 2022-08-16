@@ -1,0 +1,9 @@
+ldap_bind=dc=example,dc=org
+ldap_passwd=password
+
+ldap_raison_sociale=sn
+ldap_siret=telephoneNumber
+ldap_tva=o
+ldap_cvi=description
+ldap_accises=street
+ldap_ppm=facsimileTelephoneNumber

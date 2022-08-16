@@ -8,6 +8,7 @@ WORKDIR /tmp
 ARG ldap_passwd
 ARG ldap_domain
 ARG ldap_test_username
+ARG ldap_test_password
 ARG cas_templatespath
 
 RUN echo slapd   slapd/password1 password    $ldap_passwd | debconf-set-selections && \
@@ -36,9 +37,10 @@ COPY ${cas_templatespath}/templates/layout.html /etc/cas/templates/layout.html
 COPY ${cas_templatespath}/templates/fragments/* /etc/cas/templates/fragments/
 COPY ${cas_templatespath}/templates/login/* /etc/cas/templates/login/
 COPY ${cas_templatespath}/templates/logout/* /etc/cas/templates/logout/
+COPY bin/ldappassword.php /tmp/
 
 COPY docker/init.sh /tmp/init.sh
-RUN bash init.sh $ldap_domain $ldap_passwd $ldap_test_username
+RUN bash init.sh $ldap_domain $ldap_passwd $ldap_test_username $ldap_test_password
 
 ENV CATALINA_HOME=/usr/share/tomcat9
 ENV CATALINA_BASE=/var/lib/tomcat9

@@ -3,6 +3,7 @@
 ldap_domain=$1
 ldap_passwd=$2
 ldap_test_user=$3
+ldap_test_pass=$4
 
 echo "Cloning Apereo/CAS"
 echo "===================="
@@ -50,7 +51,10 @@ ou: People
 
 EOF
 
-if test "$ldap_test_user"; then 
+if test "$ldap_test_user" && test "$ldap_test_pass" ; then
+
+ldap_test_ssha=$(echo $ldap_test_pass | php /tmp/ldappassword.php)
+
 cat <<EOF >> init.ldif
 
 dn: uid=$ldap_test_user,ou=People,$ldap_bind
@@ -70,12 +74,12 @@ description: CVI
 street: ACCISES
 telephoneNumber: SIRET
 facsimileTelephoneNumber: PPM
-userPassword: {SSHA}w3AVhLkd/YbfYQmH36GUgVCcTpU/4HVH
+userPassword: $ldap_test_ssha
 EOF
 fi
 
 echo " =============================================================================="
-echo "| Le mot de passe du compte de test '$ldap_test_user' est 'motdetest' (sans ') |"
+echo "| Le mot de passe du compte de test '$ldap_test_user' est '$ldap_test_pass' (sans ') |"
 echo " =============================================================================="
 echo " SUPPRIMEZ LE COMPTE $ldap_test_username UNE FOIS EN PRODUCTION !"
 
@@ -85,4 +89,4 @@ echo "Cleaning"
 echo "===================="
 
 cd /
-rm -rf /tmp/cas-overlay-template /tmp/init.sh
+rm -rf /tmp/cas-overlay-template /tmp/init.sh /tmp/ldappassword.php
