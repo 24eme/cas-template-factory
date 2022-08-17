@@ -48,7 +48,7 @@
 
 The cas is available on https://localhost:8443/ (accept the autosigned certificate)
 
-##Dockerization
+## Dockerization
 
 ### Build image
 
