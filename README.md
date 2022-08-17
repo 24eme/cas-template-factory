@@ -56,7 +56,7 @@ The cas is available on https://localhost:8443/ (accept the autosigned certifica
 
 with the `build-arg`:
 
- - `cas_templatespath`: the path to a directory containing the static Apereo/CAS files (subdirectory `static`) and the Thymeleaf template files (subdirectories `templates/fragments`, `templates/login`, `templates/logout`). Examples are provided in [[templates/]].
+ - `cas_templatespath`: the path to a directory containing the static Apereo/CAS files (subdirectory `static`) and the Thymeleaf template files (subdirectories `templates/fragments`, `templates/login`, `templates/logout`). Examples are provided in [templates/](templates/).
  - `ldap_domain`: the ldap domain
  - `ldap_passwd`: the password for the ldap administrator (in clear text)
  - `ldap_test_username`: a test login to create
