@@ -4,27 +4,29 @@ ldap_domain=$1
 ldap_passwd=$2
 ldap_test_user=$3
 ldap_test_pass=$4
+viticonnect_secret=$5
 
 echo "Cloning Apereo/CAS"
 echo "===================="
 
 git clone https://github.com/apereo/cas-overlay-template.git
+cd cas-overlay-template
+git checkout 6.5
 
 echo "Prepare compilation"
 echo "===================="
 
-echo "dependencies {" >> cas-overlay-template/build.gradle
-echo 'implementation "org.apereo.cas:cas-server-support-ldap:${project.'"'"'cas.version'"'"'}"' >> cas-overlay-template/build.gradle
-echo 'implementation "org.apereo.cas:cas-server-support-json-service-registry:${project.'"'"'cas.version'"'"'}"' >> cas-overlay-template/build.gradle
-echo 'implementation "org.apereo.cas:cas-server-support-generic:${project.'"'"'cas.version'"'"'}"' >> cas-overlay-template/build.gradle
-echo "}" >> cas-overlay-template/build.gradle
-sed -i 's/sourceCompatibility=[0-9]*/sourceCompatibility=11/' cas-overlay-template/gradle.properties
-sed -i 's/targetCompatibility=[0-9]*/targetCompatibility=11/' cas-overlay-template/gradle.properties
+echo "dependencies {" >> build.gradle
+echo 'implementation "org.apereo.cas:cas-server-support-ldap:${project.'"'"'cas.version'"'"'}"' >> build.gradle
+echo 'implementation "org.apereo.cas:cas-server-support-json-service-registry:${project.'"'"'cas.version'"'"'}"' >> build.gradle
+echo 'implementation "org.apereo.cas:cas-server-support-generic:${project.'"'"'cas.version'"'"'}"' >> build.gradle
+echo "}" >> build.gradle
+sed -i 's/sourceCompatibility=[0-9]*/sourceCompatibility=11/' gradle.properties
+sed -i 's/targetCompatibility=[0-9]*/targetCompatibility=11/' gradle.properties
 
 echo "Compile Apaero/CAS"
 echo "===================="
 
-cd cas-overlay-template
 ./gradlew clean build
 
 echo "Deploy WAR on tomcat"
@@ -35,9 +37,10 @@ cp build/libs/cas.war /var/lib/tomcat*/webapps/
 echo "Adapt configuration"
 echo "===================="
 
-ldap_bind=$(echo $1 | sed 's/^/dc=/' | sed 's/\./,dc=/');
+ldap_bind=$(echo $ldap_domain | sed 's/^/dc=/' | sed 's/\./,dc=/');
 sed -i 's/dc=example,dc=org/'$ldap_bind'/' /etc/cas/config/cas.properties
 sed -i 's/bindCredential=.*/bindCredential='$ldap_passwd'/' /etc/cas/config/cas.properties
+sed -i 's/example.org/'$ldap_domain'/' /etc/cas/config/cas.properties
 
 echo "LDAP creation"
 echo "===================="
@@ -84,6 +87,13 @@ echo " =========================================================================
 echo " SUPPRIMEZ LE COMPTE $ldap_test_username UNE FOIS EN PRODUCTION !"
 
 ldapadd -H ldap://localhost:389 -c -x -D cn=admin,$ldap_bind -w $ldap_passwd < init.ldif
+
+echo "viticonnect"
+echo "===================="
+
+sed -i 's/SHARED_SECRET/'$viticonnect_secret'/' /var/www/html/viticonnect/config.php
+sed -i 's/dc=example,dc=org/'$ldap_bind'/' /var/www/html/viticonnect/config.php
+echo > /var/www/html/viticonnect/index.html
 
 echo "Cleaning"
 echo "===================="

@@ -52,8 +52,34 @@ The cas is available on https://localhost:8443/ (accept the autosigned certifica
 
 ### Build image
 
-    sudo docker build . --build-arg cas_templatespath=templates/path --build-arg ldap_domain=example.org --build-arg ldap_passwd=adminpassword  --build-arg ldap_test_username=test
+    sudo docker build . -t cas_viticonnect --build-arg cas_templatespath=templates/path --build-arg ldap_domain=example.org --build-arg ldap_passwd=adminpassword  --build-arg ldap_test_username=test arg ldap_test_password=test --build-arg viticonnect_shared_secret=SHAREDSECRET
+
+with the `build-arg`:
+
+ - `cas_templatespath`: the path to a directory containing the static Apereo/CAS files (subdirectory `static`) and the Thymeleaf template files (subdirectories `templates/fragments`, `templates/login`, `templates/logout`). Examples are provided in [[templates/]].
+ - `ldap_domain`: the ldap domain
+ - `ldap_passwd`: the password for the ldap administrator (in clear text)
+ - `ldap_test_username`: a test login to create
+ - `ldap_test_password`: the password to create for the test user
+ - `viticonnect_shared_secret`: the shared secret allowing viticonnect to query the api
 
 ### Run container
 
-    sudo docker run -it -p 8080:80 -p 389:389 <IMAGE_ID>
+    sudo docker run -it -p 8080:80 -p 389:389 -v /data/ldap:/var/lib/ldap cas_viticonnect
+
+## Viticonnect API
+
+Client Viticonnect API provides to the viticonnect server the following identifiers : SIRET, CVI, Accises, PPM, TVA Number and a "Raison sociale"
+
+By default, the simple client viticonnect api retrives these identifiers form the following LDAP fields :
+
+ - Raison sociale: `sn`
+ - SIRET: `telephoneNumber`
+ - TVA: `o`
+ - CVI: `description`
+ - Accises: `street`
+ - PPM: `facsimileTelephoneNumber`
+
+A bash script creates users using this fields : `bin/createuser4viticonnectldap.sh` (create before `bin/config.inc` from `bin/config.inc.example`)
+
+If you want to change the ldap field used by viticonnect, you can edit `viticonnect/config.php` and `bin/config.inc`

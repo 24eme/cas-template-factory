@@ -1,0 +1,14 @@
+<?php
+
+$api_secret = "SHARED_SECRET";
+$ldap_host = 'localhost';
+$ldap_basedn = 'dc=example,dc=org';
+
+$viticonnect2ldap = array(
+    'raison_sociale' => 'sn',
+    'siret' => 'telephoneNumber',
+    'cvi' => 'description',
+    'accises' => 'street',
+    'tva' => 'o',
+    'ppm' => 'facsimileTelephoneNumber'
+);
