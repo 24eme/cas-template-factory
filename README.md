@@ -52,7 +52,7 @@ The cas is available on https://localhost:8443/ (accept the autosigned certifica
 
 ### Build image
 
-    sudo docker build . -t cas_viticonnect --build-arg cas_templatespath=templates/path --build-arg ldap_domain=example.org --build-arg ldap_passwd=adminpassword  --build-arg ldap_test_username=test arg ldap_test_password=test --build-arg viticonnect_shared_secret=SHAREDSECRET
+    sudo docker build . -t cas_viticonnect --build-arg cas_templatespath=templates/path --build-arg ldap_domain=example.org --build-arg ldap_passwd=adminpassword  --build-arg ldap_test_username=test --build-arg ldap_test_password=test --build-arg viticonnect_shared_secret=SHAREDSECRET
 
 with the `build-arg`:
 
