@@ -48,15 +48,15 @@
 
 The cas is available on https://localhost:8443/ (accept the autosigned certificate)
 
-##Dockerization
+## Dockerization
 
 ### Build image
 
-    sudo docker build . -t cas_viticonnect --build-arg cas_templatespath=templates/path --build-arg ldap_domain=example.org --build-arg ldap_passwd=adminpassword  --build-arg ldap_test_username=test arg ldap_test_password=test --build-arg viticonnect_shared_secret=SHAREDSECRET
+    sudo docker build . -t cas_viticonnect --build-arg cas_templatespath=templates/path --build-arg ldap_domain=example.org --build-arg ldap_passwd=adminpassword  --build-arg ldap_test_username=test --build-arg ldap_test_password=test --build-arg viticonnect_shared_secret=SHAREDSECRET
 
 with the `build-arg`:
 
- - `cas_templatespath`: the path to a directory containing the static Apereo/CAS files (subdirectory `static`) and the Thymeleaf template files (subdirectories `templates/fragments`, `templates/login`, `templates/logout`). Examples are provided in [[templates/]].
+ - `cas_templatespath`: the path to a directory containing the static Apereo/CAS files (subdirectory `static`) and the Thymeleaf template files (subdirectories `templates/fragments`, `templates/login`, `templates/logout`). Examples are provided in [templates/](templates/).
  - `ldap_domain`: the ldap domain
  - `ldap_passwd`: the password for the ldap administrator (in clear text)
  - `ldap_test_username`: a test login to create
