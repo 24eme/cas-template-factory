@@ -47,6 +47,9 @@ COPY viticonnect/config.php.example /var/www/html/viticonnect/config.php
 COPY docker/init.sh /tmp/init.sh
 RUN bash init.sh $ldap_domain $ldap_passwd $ldap_test_username $ldap_test_password $viticonnect_shared_secret
 
+COPY docker/ldap_bcrypt.sh /tmp/ldap_bcrypt.sh
+RUN bash /tmp/ldap_bcrypt.sh
+
 ENV CATALINA_HOME=/usr/share/tomcat9
 ENV CATALINA_BASE=/var/lib/tomcat9
 ENV CATALINA_TMPDIR=/tmp
