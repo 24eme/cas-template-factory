@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Login header</title>
+    <link href="../../static/css/cas.css" rel="stylesheet" th:remove="tag" />
+</head>
+
+<body>
+    <div th:fragment="loginheader" id="loginheader">
+    <div class="row presentation">
+      <div class="col-xs-12 presentation-title">
+            <center><h1>Espace Professionnel</h1></center>
+      </div>
+    </div>
+    <div class="row inversed-row">
+        <div class="col-md-6 first-connection">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h2 class="h3">Première connexion</h2>
+                    <p>S'il s'agit de votre première connexion, munissez-vous de votre numéro d'adhérent et du code de création à 4 chiffres que vous avez reçu.</p>
+                    <p>Pour toute question, veuillez contacter : 04 90 27 24 24</p>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 btn-create">
+                            
+                          <a href="https://declaration.syndicat-cotesdurhone.com/teledeclarant/code_creation?service=https%3a%2f%2fdeclaration.syndicat-cotesdurhone.com%2f" class="btn btn-default btn-block btn-lg">Créer votre compte</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg height="200" width="10" class="separator-hr"><line x1="0" y1="0" x2="0" y2="230" style="stroke:#E1E1E1;stroke-width:2" /></svg>
+        <div class="col-md-6 space-member">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h2 class="h3">Vous avez un compte ?</h2>
+    </div>
+</body>
+
+</html>
