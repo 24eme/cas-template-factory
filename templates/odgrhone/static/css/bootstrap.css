@@ -1,14 +1,7 @@
 @font-face {
-  font-family: 'arapeyregular';
-  src: url('../fonts/arapey-regular-webfont.eot');
-  src: url('../fonts/arapey-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/arapey-regular-webfont.woff2') format('woff2'), url('../fonts/arapey-regular-webfont.woff') format('woff'), url('../fonts/arapey-regular-webfont.ttf') format('truetype'), url('../fonts/arapey-regular-webfont.svg#arapeyregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'oswaldregular';
-  src: url('../fonts/oswald-regular-webfont.eot');
-  src: url('../fonts/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/oswald-regular-webfont.woff2') format('woff2'), url('../fonts/oswald-regular-webfont.woff') format('woff'), url('../fonts/oswald-regular-webfont.ttf') format('truetype'), url('../fonts/oswald-regular-webfont.svg#oswaldregular') format('svg');
+  font-family: 'overlockregular';
+  src: url('../fonts/overlock-regular-webfont.eot');
+  src: url('../fonts/overlock-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/overlock-regular-webfont.woff2') format('woff2'), url('../fonts/overlock-regular-webfont.woff') format('woff'), url('../fonts/overlock-regular-webfont.ttf') format('truetype'), url('../fonts/overlock-regular-webfont.svg#overlockregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -32,7 +25,7 @@ html {
 body {
   margin: 0;
   background-color: #f3f3f7;
-  background-image: url('images/bg-cas.jpg');
+  background-image: url('/cas/images/bg_global.jpg');
   background-size: cover;
   min-height: 850px;
 }
@@ -212,14 +205,10 @@ textarea {
 optgroup {
   font-weight: bold;
 }
-html,
 body {
-  /*height: 100%;*/
-}
-body {
-  color: #48453f;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
+  color: #33;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px;
 }
 h1,
 h2,
@@ -227,10 +216,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "oswaldregular", Arial, sans-serif;
+  font-family: "overlockregular", Arial, sans-serif;
   font-weight: normal;
   text-align: left;
-  text-transform: uppercase;
 }
 ul,
 ol {
@@ -242,7 +230,7 @@ a {
 #parentpage {
   margin-top: 0;
   width: 100%;
-  background-image: url("../images/bg-cas.jpg");
+  background-image: url("/cas/images/bg_global.jpg");
   background-size: cover;
 }
 #page {
@@ -308,13 +296,10 @@ a {
   color: #fff;
   float: right;
 }
-#forgotten {
-  text-align: left;
-}
 #content .form-block .form-bottom {
   background: var(--cas-theme-primary, #efeeec);
   color: #fff;
-  font-family: "oswaldregular", Arial, sans-serif;
+  font-family: "overlockregular", Arial, sans-serif;
   font-size: 22px;
   position: relative;
   text-align: center;
@@ -370,11 +355,6 @@ a {
     padding-top: 0px;    
 }
 
-#login-form-controls {
-    text-align: right;
-}
-
-
 #sidebar .btn-primary {
     background: #c29140;
     color: #fff;
@@ -398,10 +378,14 @@ a {
 }
 
 :root {
-    --cas-theme-primary: #c80064;
+    --cas-theme-primary: #9f0038;
     --mdc-theme-primary: var(--cas-theme-primary, #1c2436);
 }
 
 #divAuthenticationAttributes{
     overflow: auto;
+}
+
+.btn-primary {
+	background-color: var(--mdc-theme-primary, #1c2436);
 }

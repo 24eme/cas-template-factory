@@ -12,32 +12,29 @@
 
 <body>
     <div th:fragment="loginheader" id="loginheader">
-    <div class="row presentation">
-      <div class="col-xs-12 presentation-title">
+    <div class="presentation">
+      <div class="col-12 presentation-title">
             <center><h1>Espace Professionnel</h1></center>
       </div>
     </div>
-    <div class="row inversed-row">
-        <div class="col-md-6 first-connection">
+    <div class="row">
+        <div class="col-md-4 offset-1 first-connection">
             <div class="row">
-                <div class="col-xs-10 col-xs-offset-1">
-                    <h2 class="h3">Première connexion</h2>
-                    <p>S'il s'agit de votre première connexion, munissez-vous de votre numéro d'adhérent et du code de création à 4 chiffres que vous avez reçu.</p>
-                    <p>Pour toute question, veuillez contacter : 04 90 27 24 24</p>
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 btn-create">
-                            
-                          <a href="https://declaration.syndicat-cotesdurhone.com/teledeclarant/code_creation?service=https%3a%2f%2fdeclaration.syndicat-cotesdurhone.com%2f" class="btn btn-default btn-block btn-lg">Créer votre compte</a>
+                    <h2>Première connexion</h2>
+                    <p class="my-2">S'il s'agit de votre première connexion, munissez-vous de votre numéro d'adhérent et du code de création à 4 chiffres que vous avez reçu.</p>
+                    <p class="my-2">Pour toute question, veuillez contacter : 04 90 27 24 24</p>
+                    <div class="row mt-5">
+                        <div class="mt-5">
+                          <a href="https://declaration.syndicat-cotesdurhone.com/teledeclarant/code_creation?service=https%3a%2f%2fdeclaration.syndicat-cotesdurhone.com%2f" class="btn btn-primary btn-block btn-lg mdc-button mdc-button--raised mt-2">Créer votre compte</a>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
-        <svg height="200" width="10" class="separator-hr"><line x1="0" y1="0" x2="0" y2="230" style="stroke:#E1E1E1;stroke-width:2" /></svg>
-        <div class="col-md-6 space-member">
-                <div class="col-xs-10 col-xs-offset-1">
+	<div class="col-md-2 d-none d-md-block">
+        <svg height="250" width="10" class="offset-6 my-5"><line x1="0" y1="0" x2="0" y2="300" style="stroke:#E1E1E1;stroke-width:2" /></svg>
+	</div>
+        <div class="col col-md-4 space-member">
                     <h2 class="h3">Vous avez un compte ?</h2>
-    </div>
 </body>
 
 </html>

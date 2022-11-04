@@ -1,7 +1,7 @@
 /* Root / Reset */
 
 :root {
-    --cas-theme-primary: #c80064;
+    --cas-theme-primary: #9f0038;
     --cas-theme-primary-bg: rgba(21, 62, 80, 0.2);
     --cas-theme-primary-light: #006d85;
     --cas-theme-secondary: #74C163;
@@ -17,6 +17,7 @@
     --cas-theme-facebook-color: #3B5998;
     --atlassian-theme-primary: #0747a6;
     --mdc-theme-primary: var(--cas-theme-primary, #153e50);
+    --mdc-typography-font-family: "Open Sans",Helvetica,Arial,sans-serif;
 }
 
 .atlassian {
@@ -60,7 +61,6 @@ aside, section, main {
 
 .mdc-drawer-app-content {
     flex: auto;
-    overflow: auto;
     position: relative;
 }
 
@@ -617,4 +617,104 @@ button.close {
 .pwd::-ms-reveal,
 .pwd::-ms-clear {
     display: none;
+}
+
+#header {
+  background: #FFF 0 0 no-repeat;
+  position: relative;
+  border-bottom: solid 6px #9f0038;
+  padding: 0;
+}
+
+.container {
+  width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#header #logo {
+  float: left;
+}
+
+#content {
+	margin: auto;
+	margin-top: 25px;
+}
+.separator-hr {
+  position: absolute;
+  top: 150px;
+  left: 570px;
+  z-index: 1000;
+}
+
+.login-section form {
+	padding: 0 !important;
+}
+
+.presentation .presentation-title {
+  background: #EDEDED;
+  z-index: 1000;
+  padding: 10px 45px;
+  position: relative;
+  text-align: center;
+}
+
+center h1 {
+	text-align: center !important;
+}
+
+.presentation .presentation-title:after{
+	position:absolute;
+	top:100%;
+	right:0;
+	bottom:auto;
+	left:0;
+	-webkit-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+	width:0;
+	height:0;
+	border-style:inset;
+	border-width:17px 17px 0;
+	border-color:#EDEDED transparent transparent;
+	content:'';
+	display:inline-block;
+	border-top-style:solid;
+	margin:0 auto
+}
+
+.presentation-title h1, .first-connection h2, .space-member h2 {
+	font-weight: 600;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	line-height: 1.1;
+	color: black;
+}
+
+.presentation-title h1 {
+	font-size: 39px;
+}
+
+.first-connection, .space-member {
+  color: #000;
+  min-height: 320px;
+  text-align: center;
+}
+
+.first-connection h2, .space-member h2 {
+  color: #000;
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.first-connection p {
+	text-align: left;
+}
+
+.home_auth .row {
+  margin: 0 -20px;
+}
+
+#forgotten {
+	text-align: right;
 }

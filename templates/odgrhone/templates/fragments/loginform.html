@@ -92,7 +92,7 @@
                             /*]]>*/
                         </script>
                     </section>
-                    <section class="cas-field form-group my-3 mdc-input-group form-group" id="passwordSection">
+                    <section class="cas-field form-group mt-3 mdc-input-group form-group" id="passwordSection">
                         <div class="mdc-input-group-field mdc-input-group-field-append">
                             <div class="caps-check">
                                 <label for="password"
@@ -193,7 +193,7 @@
                         </div>
                     </section>
 
-                    <section class="cas-field form-group my-3">
+                    <section class="cas-field form-group">
                         <div th:each="entry: ${customLoginFormFields}">
                             <label class="mdc-text-field mdc-text-field--outlined control-label">
                                 <input class="mdc-text-field__input form-control"
@@ -264,9 +264,8 @@
                             </span>
                         </p>
                     </section>
-
+                    <div th:replace="fragments/forgotten :: forgotten"/>		   
                     <div th:replace="fragments/submitbutton :: submitButton (messageKey='screen.welcome.button.login')"/>
-                    <div th:replace="fragments/forgotten :: forgotten"/>
                 </div>
             </form>
 
@@ -304,8 +303,6 @@
                        th:text="#{screen.welcome.button.loginx509}">X509 Login</a>
                 </span>
             </div>
-
-            <hr th:if="${loginFormViewable and loginFormEnabled}" class="my-4"/>
 
             <span id="webauthnLoginPanel" th:if="${webAuthnPrimaryAuthenticationEnabled}">
                 <script type="text/javascript">
