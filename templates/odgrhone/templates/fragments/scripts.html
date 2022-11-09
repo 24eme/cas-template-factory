@@ -5,10 +5,8 @@
     </span>
 </span>
 
-<span th:remove="tag" th:each="file : ${#strings.arraySplit(#themes.code('cas.standard.js.file'), ',')}">
-    <script type="text/javascript" th:src="@{${file}}"></script>
-</span>
-
+<script type="text/javascript" src="/cas/js/cas.js?20221109"></script>
+<script type="text/javascript" src="/cas/js/material.js?20221109"></script>
 
 <script th:inline="javascript">
     if (typeof resourceLoadedSuccessfully === "function") {
