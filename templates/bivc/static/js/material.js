@@ -54,10 +54,6 @@ function resourceLoadedSuccessfully() {
 
     $(document).ready(() => {
 
-        if (trackGeoLocation) {
-            requestGeoPosition();
-        }
-
         if ($(':focus').length === 0) {
             $('input:visible:enabled:first').focus();
         }
