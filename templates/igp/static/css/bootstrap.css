@@ -277,7 +277,13 @@ body {
   margin: 0 auto;
   max-width: 460px;
 }
-#logo {padding: 0px !important;}
+#header .form-block div{
+	min-height: 125px;
+}
+#logo {
+	padding: 0px !important;
+	width: 100%;
+}
 #content .form-block h2 {
   border-bottom: 1px solid #af588f;
   color: #af588f;

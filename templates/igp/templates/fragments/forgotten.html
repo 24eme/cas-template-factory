@@ -12,8 +12,8 @@
 
 <body>
     <div th:fragment="forgotten" id="forgotten">
-        <p>
-            <a href="https://igp.vins.24eme.fr/access.php?action=mdpoublie&service=${param.service}">Mot de passe oublié ?</a>
+	<p>
+	      <a th:href="'https://igp.vins.24eme.fr/access.php?action=mdpoublie&service=' + ${service}">Mot de passe oublié ?</a>
         </p>
     </div>
 </body>

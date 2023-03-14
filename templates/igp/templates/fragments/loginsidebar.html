@@ -19,7 +19,7 @@
     			<p>
 				S'il s'agit de votre première connexion, munissez vous de votre identifiant et du code de création à 4 chiffres qui vous ont été fournis.
     			</p>
-			<a href="https://igp.vins.24eme.fr/access.php?action=creation&service=${param.service}" class="mdc-button mdc-button--raised btn btn-primary btn-primary">Créer votre compte</a>
+			<a th:href="'https://igp.vins.24eme.fr/access.php?action=creation&service=' + ${service}" class="mdc-button mdc-button--raised btn btn-primary btn-primary">Créer votre compte</a>
     		</div>
             <div id="cookiesDisabled" class="errors" style="display:none;background-color:red">
                 <h2>Cookies navigateur désactivés</h2>

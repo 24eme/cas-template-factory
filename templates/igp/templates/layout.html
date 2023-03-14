@@ -24,7 +24,7 @@
         th:href="@{${#strings.defaultString(#themes.code('cas.favicon.file'), '/favicon.ico')}}" />
 </head>
 
-<body>
+<body th:with="service = ${param.service}" >
     <script th:replace="fragments/scripts"></script>
 
     <div id="parentpage">
