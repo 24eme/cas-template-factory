@@ -281,8 +281,9 @@ body {
 	min-height: 125px;
 }
 #logo {
-	padding: 0px !important;
+	padding: 10px !important;
 	width: 100%;
+	margin-right: 5px;
 }
 #content .form-block h2 {
   border-bottom: 1px solid #af588f;
