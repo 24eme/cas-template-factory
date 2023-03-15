@@ -638,3 +638,22 @@ button.close {
 #loginForm {
 	border: 0px !important;
 }
+
+.side-footer::before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  width: 0;
+  height: 0;
+  border-style: inset;
+    border-top-style: inset;
+  border-width: 17px 17px 0;
+  border-color: #ffffff transparent transparent;
+  content: '';
+  display: inline-block;
+  border-top-style: solid;
+  margin: 0 auto;
+}
