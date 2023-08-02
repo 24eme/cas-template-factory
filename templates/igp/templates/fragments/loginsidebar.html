@@ -13,24 +13,40 @@
 <body>
     <main role="main" class="container mt-3 mb-3">
         <div th:fragment="loginsidebar" id="sidebar">
-            <div class="form-signup">
-    			<h2>Première connexion :</h2>
+            <div class="px-5 pb-5">
+                <h3>Depuis votre Interpro (via VitiConnect):</h3>
 
-    			<p>
-				S'il s'agit de votre première connexion, munissez vous de votre identifiant et du code de création à 4 chiffres qui vous ont été fournis.
-    			</p>
-			<a th:href="'https://igp.vins.24eme.fr/access.php?action=creation&service=' + ${service}" class="mdc-button mdc-button--raised btn btn-primary btn-primary">Créer votre compte</a>
-    		</div>
+                <div class="dropdown pt-1">
+                    <button class="mdc-button mdc-button--raised btn btn-primary w-100 dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="true">
+                        Connexion via votre IntroPro
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" th:href="'https://viticonnect.net/cas/declarvins/login?service=' + ${service}">Connexion via Déclarvins</a></li>
+                        <li><a class="dropdown-item" th:href="'https://viticonnect.net/cas/ivso/login?service=' + ${service}">Connexion via IVSO</a></li>
+                    </ul>
+                </div>
+                <hr/>
+            </div>
+            <div class="form-signup">
+                <h2>Première connexion :</h2>
+                
+                <p>
+                    S'il s'agit de votre première connexion, munissez vous de votre identifiant et du code de création à 4 chiffres qui vous ont été fournis.
+                </p>
+                <a th:href="'https://igp.vins.24eme.fr/access.php?action=creation&service=' + ${service}" class="mdc-button mdc-button--raised btn btn-primary w-100">Créer votre compte</a>
+            </div>
+
             <div id="cookiesDisabled" class="errors" style="display:none;background-color:red">
                 <h2>Cookies navigateur désactivés</h2>
                 <p>Votre navigateur ne supporte pas les cookies. L'authentification centralisée NE FONCTIONNERA PAS.</p>
             </div>
 
-                <div class="side-footer">
-                        <h2>
-                                Saisissez en ligne vos déclarations liées au cahier des charges IGP.
-                        </h2>
-                </div>
+            <div class="side-footer">
+                <h2>
+                    Saisissez en ligne vos déclarations liées au cahier des charges IGP.
+                </h2>
+            </div>
 
         </div>
     </main>
