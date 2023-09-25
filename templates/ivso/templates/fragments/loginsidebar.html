@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Login Sidebar Fragment</title>
+    <link href="../../static/css/cas.css" rel="stylesheet" th:remove="tag" />
+</head>
+
+<body>
+    <main role="main" class="container mt-3 mb-3">
+        <div th:fragment="loginsidebar" id="sidebar">
+            <div class="form-signup">
+    			<h3>Première connexion :</h3>
+
+    			<p>
+                    S'il s'agit de votre première connexion, munissez vous de votre identifiant et du code de création à 4 chiffres de création reçus par courrier :
+    			</p>
+
+    			<a href="https://declaration.ivsopro.com/teledeclarant/code_creation" class="mdc-button mdc-button--raised btn btn-primary btn-primary">Créer votre compte</a>
+    		</div>
+            <div id="cookiesDisabled" class="errors" style="display:none;background-color:red">
+                <h2>Cookies navigateur désactivés</h2>
+                <p>Votre navigateur ne supporte pas les cookies. L'authentification centralisée NE FONCTIONNERA PAS.</p>
+            </div>
+
+    		<div class="form-bottom">
+    			<ul>
+    				<li>Enregistrez vos contrats en ligne</li>
+    				<li>Déclarez vos drm</li>
+    			</ul>
+    		</div>
+        </div>
+    </main>
+</body>
+
+</html>
