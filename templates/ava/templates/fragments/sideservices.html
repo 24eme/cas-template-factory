@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Login Sidebar Fragment</title>
+    <link href="../../static/css/cas.css" rel="stylesheet" th:remove="tag" />
+</head>
+
+<body>
+    <main role="main" class="container mt-3 mb-3">
+        <div th:fragment="sideservices" class="d-flex flex-column justify-content-between m-auto">
+            <div class="form-bottom">
+                <div class="presentation-services">
+                    <div class="row">
+                        <div class="col-xs-12 presentation-title">
+                            <h2>Sur ce site, l'AVA met à la disposition de ses adhérents une multiplicité de services :</h2>
+                        </div>
+                    </div>
+
+                    <div class="row pb-5">
+                        <div class="col-4">
+                            <a href="https://declaration.ava-aoc.fr/">
+                                <div class="module module-declarations">
+                                    <h3>Un module <br />de saisie des déclarations</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://declaration.ava-aoc.fr/habilitation/consultation">
+                                <div class="module module-cartographique">
+                                    <h3>Consultation<br/>des habilitations<br/>du vignoble</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4" style="position:relative;">
+                            <a href="https://ava-aoc.fr/espace-documentaire">
+                                <div class="module module-bibliotheque">
+                                    <h3>Une bibliothèque de documents téléchargables</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

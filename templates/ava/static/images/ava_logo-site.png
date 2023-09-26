@@ -1,0 +1,10 @@
+--2023-09-26 16:06:36--  http://10.20.68.1:8080/cas/AVA/images/logo_site.png
+Connexion à 10.20.68.1:8080… connecté.
+requête HTTP transmise, en attente de la réponse… 200 
+Taille : 7710 (7,5K) [image/png]
+Sauvegarde en : « logo_site.png »
+
+     0K .......                                               100% 26,2M=0s
+
+2023-09-26 16:06:36 (26,2 MB/s) — « logo_site.png » sauvegardé [7710/7710]
+
