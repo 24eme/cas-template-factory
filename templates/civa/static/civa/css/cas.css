@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 #page {
-    width: 1000px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -80,6 +80,8 @@ header {
     background-image: url(../images/logo_civa.png);
     background-repeat: no-repeat;
     background-position: 40px 5px;
+    height: 70px;
+    overflow: hidden;
 }
 #header h1 {
     margin-left: 140px;
@@ -92,7 +94,7 @@ header {
 }
 
 #main-content {
-  width: 1000px;
+  max-width: 1000px;
   overflow: hidden;
   padding-left: 0px;
   padding-right: 0px;

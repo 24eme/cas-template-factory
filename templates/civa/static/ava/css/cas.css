@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .presentation-services h3 { color: #105251; margin-top: 0; margin-bottom: 20px; text-transform: uppercase; font-weight: 600; font-size: 18px;}
 
 #page {
-    width: 960px;
+    max-width: 960px;
     margin: auto;
 }
 
@@ -131,6 +131,6 @@ header {
 }
 
 #main-content {
-  width: 960px;
+  max-width: 960px;
   overflow: hidden;
 }
