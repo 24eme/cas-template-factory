@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Login Sidebar Fragment</title>
+    <link href="../../static/css/cas.css" rel="stylesheet" th:remove="tag" />
+</head>
+
+<body>
+    <main role="main" class="container mt-3 mb-3">
+        <div th:fragment="premiereconnexion">
+            <div class="form-signup">
+                <div class="loginblock">
+    		<h2>Première connexion</h2>
+                <div class="content">
+    			<p>
+                     S'il s'agit de votre première connexion, munissez-vous de votre numéro CVI et du code de création à 4 chiffres que vous avez reçu par courrier.
+    			</p>
+                <center>
+    			<a href="https://declaration.ava-aoc.fr/compte" class="mdc-button mdc-button--raised btn btn-success">Créer votre compte</a>
+                </center>
+                </div>
+		</div>
+    		</div>
+            <div id="cookiesDisabled" class="errors" style="display:none;background-color:red">
+                <h2>Cookies navigateur désactivés</h2>
+                <p>Votre navigateur ne supporte pas les cookies. L'authentification centralisée NE FONCTIONNERA PAS.</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
