@@ -11,7 +11,7 @@
 
 <body class="login">
 <div layout:fragment="content" class="justify-content-center">
-<th:block th:if="${registeredService}">
+<th:block th:if="${is_template_ava}">
 <!----
 
         AVA Login
@@ -47,7 +47,7 @@
         </section>
     </div>
 </th:block>
-<th:block th:unless="${registeredService}">
+<th:block th:unless="${is_template_ava}">
 <!----
 
         CIVA Login

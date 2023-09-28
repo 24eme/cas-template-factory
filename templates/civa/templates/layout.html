@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<th:block th:if="${registeredService}">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" th:with="is_template_ava = (${service}) ? (${#strings.contains(service, 'ava-aoc')}) : 0 ">
+<th:block th:if="${is_template_ava}">
 <!----
 
         AVA Layout
@@ -59,7 +59,7 @@
 
 </body>
 </th:block>
-<th:block th:unless="${registeredService}">
+<th:block th:unless="${is_template_ava}">
 <!----
 
         CIVA Layout
