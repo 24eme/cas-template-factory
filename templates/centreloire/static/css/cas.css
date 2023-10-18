@@ -601,6 +601,7 @@ button.close {
     background-image: url(../images/syndicats.jpg);
     background-position: right;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #header .container {
