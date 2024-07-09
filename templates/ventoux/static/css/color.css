@@ -1,0 +1,22 @@
+:root {
+    --cas-theme-primary: #153e50;
+    --cas-theme-primary-bg: rgba(21, 62, 80, 0.2);
+    --cas-theme-primary-light: #006d85;
+    --cas-theme-secondary: #fa9c31;
+    --cas-theme-success: #0e426a;
+    --cas-theme-danger: var(--mdc-theme-error);
+    --cas-theme-warning: #e6a210;
+    --cas-theme-border-light: 1px solid rgba(0, 0, 0, .2);
+    --cas-theme-twitter-color: #55acee;
+    --cas-theme-vimeo-color: #1ab7ea;
+    --cas-theme-vk-color: #587ea3;
+    --cas-theme-yahoo-color: #720e9e;
+    --cas-theme-google-color: #CC5445;
+    --cas-theme-facebook-color: #3B5998;
+    --atlassian-theme-primary: #0747a6;
+    --mdc-theme-primary: var(--cas-theme-primary, #153e50);
+}
+
+.atlassian {
+    --mdc-theme-primary: var(--atlassian-theme-primary, #0747a6);
+}
