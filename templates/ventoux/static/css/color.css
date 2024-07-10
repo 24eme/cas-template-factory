@@ -1,8 +1,8 @@
 :root {
-    --cas-theme-primary: #153e50;
+    --cas-theme-primary: #0e426a;
     --cas-theme-primary-bg: rgba(21, 62, 80, 0.2);
     --cas-theme-primary-light: #006d85;
-    --cas-theme-secondary: #fa9c31;
+    --cas-theme-secondary: #cc3399;
     --cas-theme-success: #0e426a;
     --cas-theme-danger: var(--mdc-theme-error);
     --cas-theme-warning: #e6a210;
