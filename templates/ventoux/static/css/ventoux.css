@@ -4,6 +4,8 @@
 }
 #footer {
 	background: #fff3;
+	height: 40px;
+	line-height: 40px;
 }
 #footer ul {
 	text-shadow: 0px 0px 3px #000;
