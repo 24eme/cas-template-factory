@@ -20,17 +20,3 @@
 .atlassian {
     --mdc-theme-primary: var(--atlassian-theme-primary, #0747a6);
 }
-#loginForm {
-	border-right-width: 0px;
-	border-right-style: solid;
-}
-#footer {
-	background: #fff5;
-	background: #fff2;
-}
-#footer ul {
-	text-shadow: 0px 0px 3px #000;
-}
-#footer a {
-	color: #fff;
-}
