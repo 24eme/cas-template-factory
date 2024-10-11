@@ -580,6 +580,7 @@ button.close {
 ::after,
 ::before {
     box-sizing: border-box;
+    background-size: contain;
 }
 
 .text-justify {
