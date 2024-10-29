@@ -1,59 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title
+            layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE"
+            th:text="${#strings.defaultString(#themes.code('cas.theme.name'), 'Espace des producteurs de l''AOC Ventoux')}"
+        >
+        </title>
 
-    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE"
-        th:text="${#strings.defaultString(#themes.code('cas.theme.name'), 'Espace des professionnels des AOC Ventoux')}">
-    </title>
-
-    <!--/* Core CAS CSS */-->
-    <span th:remove="tag" th:if="${'true' == #strings.defaultString(#themes.code('cas.css.core.enabled'), 'true')}">
-        <span th:replace="fragments/includes :: stylesheets">
-            <a href="fragments/includes.html">Theme</a> stylesheet fragment will go here
+        <!--/* Core CAS CSS */-->
+        <span
+            th:remove="tag"
+            th:if="${'true' == #strings.defaultString(#themes.code('cas.css.core.enabled'), 'true')}"
+        >
+            <span th:replace="fragments/includes :: stylesheets">
+                <a href="fragments/includes.html">Theme</a> stylesheet fragment
+                will go here
+            </span>
         </span>
-    </span>
 
-    <link rel="stylesheet" type="text/css" href="./css/color.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/cas.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/ventoux.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/color.css" />
+        <link rel="stylesheet" type="text/css" href="./css/cas.css?241011" />
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="./css/ventoux.css" />
 
-    <link rel="shortcut icon"
-        th:href="@{${#strings.defaultString(#themes.code('cas.favicon.file'), '/favicon.ico')}}" />
-</head>
+        <link
+            rel="shortcut icon"
+            th:href="@{${#strings.defaultString(#themes.code('cas.favicon.file'), '/favicon.ico')}}"
+        />
+    </head>
 
-<body style="background-position: left top; background-size: 100%; background-image: url('data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wgARCAANABQDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAGAEBAAMBAAAAAAAAAAAAAAAAAQACAwT/2gAMAwEAAhADEAAAAUvmpFHG51RlvP/EABsQAAICAwEAAAAAAAAAAAAAAAECAAMREhMh/9oACAEBAAEFAgyQMk2Sc1BNIwavf//EABYRAQEBAAAAAAAAAAAAAAAAABEAIP/aAAgBAwEBPwEiMf/EABgRAAMBAQAAAAAAAAAAAAAAAAABEhEQ/9oACAECAQE/AbRaLXNNP//EABoQAAICAwAAAAAAAAAAAAAAAAABAjERIjL/2gAIAQEABj8CLOkJ4LY95H//xAAeEAACAQMFAAAAAAAAAAAAAAAAAREhMVEQYXGR8f/aAAgBAQABPyHIfR4r0iiGq4N2JsMitPJ//9oADAMBAAIAAwAAABAWpL//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAEDAQE/EGMVP//EABkRAAMBAQEAAAAAAAAAAAAAAAABEVEhYf/aAAgBAgEBPxB7IeyPQrkonTIi4f/EAB8QAAEDAwUAAAAAAAAAAAAAAAEAESExQVFhkbHB8P/aAAgBAQABPxDuYMrND1hNxzInArMAQlni8JgBECqMRS+a7oS3KNAX/9k=');">
-    <script th:replace="fragments/scripts"></script>
+    <body
+        style="
+            background-position: left top;
+            background-size: 100%;
+            background-image: url(&quot;data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wgARCAANABQDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAGAEBAAMBAAAAAAAAAAAAAAAAAQACAwT/2gAMAwEAAhADEAAAAUvmpFHG51RlvP/EABsQAAICAwEAAAAAAAAAAAAAAAECAAMREhMh/9oACAEBAAEFAgyQMk2Sc1BNIwavf//EABYRAQEBAAAAAAAAAAAAAAAAABEAIP/aAAgBAwEBPwEiMf/EABgRAAMBAQAAAAAAAAAAAAAAAAABEhEQ/9oACAECAQE/AbRaLXNNP//EABoQAAICAwAAAAAAAAAAAAAAAAABAjERIjL/2gAIAQEABj8CLOkJ4LY95H//xAAeEAACAQMFAAAAAAAAAAAAAAAAAREhMVEQYXGR8f/aAAgBAQABPyHIfR4r0iiGq4N2JsMitPJ//9oADAMBAAIAAwAAABAWpL//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAEDAQE/EGMVP//EABkRAAMBAQEAAAAAAAAAAAAAAAABEVEhYf/aAAgBAgEBPxB7IeyPQrkonTIi4f/EAB8QAAEDAwUAAAAAAAAAAAAAAAEAESExQVFhkbHB8P/aAAgBAQABPxDuYMrND1hNxzInArMAQlni8JgBECqMRS+a7oS3KNAX/9k=&quot;);
+        "
+    >
+        <script th:replace="fragments/scripts"></script>
 
-    <div id="parentpage">
-		<div id="page">
-    <div th:replace="fragments/header :: header">
-        <a href="fragments/header.html">Header</a> fragment will go here
-    </div>
+        <div id="parentpage">
+            <div id="page">
+                <div th:replace="fragments/header :: header">
+                    <a href="fragments/header.html">Header</a> fragment will go
+                    here
+                </div>
 
-    <div class="mdc-drawer-scrim"></div>
+                <div class="mdc-drawer-scrim"></div>
 
-    <div class="mdc-top-app-bar--fixed-adjust d-flex justify-content-center">
-        <main role="main" id="main-content" class="container-lg py-4">
-            <div id="content" style="min-height: 850px">
-                <div class="form-block">
-                    <div layout:fragment="content" id="content">
-                        CAS content will go here
-                    </div>
+                <div
+                    class="mdc-top-app-bar--fixed-adjust d-flex justify-content-center"
+                >
+                    <main
+                        role="main"
+                        id="main-content"
+                        class="container-lg py-4"
+                    >
+                        <div id="content" style="min-height: 850px">
+                            <div class="form-block">
+                                <div layout:fragment="content" id="content">
+                                    CAS content will go here
+                                </div>
+                            </div>
+                        </div>
+                    </main>
                 </div>
             </div>
-        </main>
-    </div>
-    </div>
-    </div>
-    <div th:replace="fragments/footer :: footer">
-        <a href="fragments/footer.html">Footer</a> fragment will go here
-    </div>
-
-</body>
-
+        </div>
+        <div th:replace="fragments/footer :: footer">
+            <a href="fragments/footer.html">Footer</a> fragment will go here
+        </div>
+    </body>
 </html>
