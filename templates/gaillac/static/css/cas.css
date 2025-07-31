@@ -32,6 +32,8 @@ body {
     justify-content: space-between;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background: #EFEFEF;
+    background-size: auto !important;
+    background-repeat: inherit !important;
 }
 
 a {
