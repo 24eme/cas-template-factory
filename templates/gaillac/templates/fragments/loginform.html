@@ -334,6 +334,12 @@
                         return true;
                     });
                 });
+
+                function passwordLengthValidationMsg() {
+                  const mdpField = document.getElementById('password');
+                  mdpField.setCustomValidity('Mot de passe trop court.' + "\n" + "\n" +  'Si il s\'agit d\'un code de création, cliquez sur le bouton "CRÉER VOTRE COMPTE" en bas-de page.');
+                }
+                passwordLengthValidationMsg();
             </script>
         </div>
 
