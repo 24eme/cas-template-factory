@@ -108,6 +108,7 @@
                                            type="password"
                                            id="password"
                                            size="25"
+                                           minlength="5"
                                            required
                                            th:accesskey="#{screen.welcome.label.password.accesskey}"
                                            th:field="*{password}"
@@ -336,9 +337,16 @@
                 });
 
                 function passwordLengthValidationMsg() {
-                  const mdpField = document.getElementById('password');
-                  mdpField.setCustomValidity('Mot de passe trop court.' + "\n" + "\n" +  'Si il s\'agit d\'un code de création, cliquez sur le bouton "CRÉER VOTRE COMPTE" en bas-de page.');
+                  const mdpInput = document.getElementById('password');
+                  mdpInput.addEventListener("input", () => {
+                    if (mdpInput.validity.tooShort) {
+                      mdpInput.setCustomValidity('Mot de passe trop court.' + "\n" + "\n" +  'Si il s\'agit d\'un code de création, cliquez sur le bouton "CRÉER VOTRE COMPTE" en bas-de page.');
+                    } else {
+                      mdpInput.setCustomValidity("");
+                    }
+                  });
                 }
+
                 passwordLengthValidationMsg();
             </script>
         </div>
